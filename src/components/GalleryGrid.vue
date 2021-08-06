@@ -1,10 +1,11 @@
 <template>
   <div class="gallery-panel">
-    <img :src="thumbnail(photo.file)" @click="callOnClick()" :data-photo-id="photo.id" class="rounded">
+    <img :src="thumbnail(photo.file)" @click="callOnClick()" :data-photo-id="photo.id" class="rounded" @load="loadTen">
   </div>
 </template>
 
 <script>
+let loadedCount = 0;
 export default {
   props: ['photo', 'year'],
   data() {
@@ -19,6 +20,12 @@ export default {
     callOnClick() {
       this.$emit('showFull', event.target.getAttribute('data-photo-id'));
     },
+    loadTen() {
+      if (loadedCount === 10) {
+        this.$emit('showGrid');
+      }
+      loadedCount++;
+    }
   },
 }
 </script>

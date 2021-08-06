@@ -1,17 +1,28 @@
 <template>
   <div class="overlay">
-		<img :src="imageLocation()" >
+		<img :src="imageLocation()" @load="fullImgLoaded" v-show="loaded">
+    <div class="home-loading-status" v-show="!loaded">
+      <div class="spinner-grow text-light" role="status"></div>
+    </div>
 	</div>
 </template>
 
 <script>
 export default {
 	props: ['file', 'year'],
+  data () {
+    return {
+      loaded: false,
+    }
+  },
 	methods: {
 		imageLocation () {
       return require (`@/assets/imgs/fullsize/${this.year}/${this.file}.jpg`);
-		}
-	}
+		},
+    fullImgLoaded () {
+      this.loaded = true;
+    }
+	},
 }
 </script>
 

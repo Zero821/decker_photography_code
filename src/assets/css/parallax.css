@@ -61,3 +61,10 @@ html {
   padding: 0;
   margin: 0;
 }
+
+.home-fade-enter-from {
+  opacity: 0;
+}
+.home-fade-enter-active {
+  transition: all 1s ease;
+}

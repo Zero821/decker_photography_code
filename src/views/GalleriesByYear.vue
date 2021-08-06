@@ -1,6 +1,6 @@
 <template>
 	<NavBar />
-	<transition appear name="r-trans">
+	<transition v-show="show" appear name="r-trans">
 		<div class="container mt-5">
 
 			<div class="row d-flex">
@@ -18,13 +18,17 @@
 				</div>
 
 				<div class="col-12 col-md-6 mb-4">
-					<router-link to="/2018"><img src="@/assets/imgs/collages/2018.jpg" class="img-fluid"></router-link>
+					<router-link to="/2018"><img src="@/assets/imgs/collages/2018.jpg" class="img-fluid" @load="renderGalleries"></router-link>
 				</div>
 
 			</div>
 
 		</div>
-	</transition>
+	</transition>   
+  <div v-if="!show" class="home-loading-status">
+    <div class="spinner-grow" role="status">
+    </div>
+  </div>
 
 </template>
 
@@ -33,7 +37,17 @@ import NavBar from '@/components/NavBar.vue'
 export default {
 	components:{
 		NavBar,
-	}
+	},
+  data () {
+    return {
+      show: false,
+    }
+  },
+  methods: {
+    renderGalleries () {
+      this.show = true;
+    }
+  }
 }
 </script>
 
