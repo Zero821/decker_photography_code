@@ -21,7 +21,7 @@ export default {
       this.$emit('showFull', event.target.getAttribute('data-photo-id'));
     },
     loadTen() {
-      if (loadedCount === 10) {
+      if (loadedCount >= 10) {
         this.$emit('showGrid');
       }
       loadedCount++;

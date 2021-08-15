@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     renderHomePage () {
-      if (backgroundLoadCount == 2) {
+      if (backgroundLoadCount >= 2) {
         this.show = true;
       }
       backgroundLoadCount++;
