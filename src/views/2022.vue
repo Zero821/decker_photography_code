@@ -4,7 +4,7 @@
 		<transition v-show="!hideGrid" appear name="slide-trans">
 			<div>
 				<div class="year my-3">
-					2021
+					2022
 				</div>
 
 				<div class="gallery align-items-baseline" :class="{blur: displayOverlay}">

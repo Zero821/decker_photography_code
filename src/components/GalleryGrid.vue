@@ -11,6 +11,7 @@ export default {
   data() {
     return {
       show: false,
+      curYear: new Date().getFullYear,
     }
   },
   methods: {
@@ -21,7 +22,9 @@ export default {
       this.$emit('showFull', event.target.getAttribute('data-photo-id'));
     },
     loadTen() {
-      if (loadedCount >= 10) {
+      if (loadedCount >= 10 && this.year != this.curYear) {
+        this.$emit('showGrid');
+      } else { //might not have 10 ready at first go
         this.$emit('showGrid');
       }
       loadedCount++;

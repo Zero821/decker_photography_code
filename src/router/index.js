@@ -22,7 +22,7 @@ const routes = [
   {
     path: '/2022',
     Name: '2022_Gallery',
-    component: Gallery_2021
+    component: Gallery_2022
   },
   {
     path: '/2021',
