@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import GalleriesByYear from '../views/GalleriesByYear.vue'
+import Gallery_2022 from '../views/2022.vue'
 import Gallery_2021 from '../views/2021.vue'
 import Gallery_2020 from '../views/2020.vue'
 import Gallery_2019 from '../views/2019.vue'
@@ -17,6 +18,11 @@ const routes = [
     path: '/years',
     Name: 'Galleries_By_Year',
     component: GalleriesByYear
+  },
+  {
+    path: '/2022',
+    Name: '2022_Gallery',
+    component: Gallery_2021
   },
   {
     path: '/2021',
