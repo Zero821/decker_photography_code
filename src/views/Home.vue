@@ -13,7 +13,7 @@
             </div>
           </div>
           <div class="links-center col-md-4 col-sm-6 col-12 mt-3">
-            <router-link class="text-white text-decoration-none" to="/years" >Galleries</router-link>
+            <router-link class="text-white text-decoration-none" to="/galleries" >Galleries</router-link>
               •
               <a href="https://www.instagram.com/zero_821" class="text-white text-decoration-none" target="_blank"><i class="fab fa-instagram"></i></a>
               •
@@ -24,9 +24,9 @@
     </div>
     <!--img preloader -->
     <div style="display:none;">
-      <img src="@/assets/imgs/fullsize/2018/4.jpg" @load="renderHomePage">
-      <img src="@/assets/imgs/fullsize/2019/12.jpg" @load="renderHomePage">
-      <img src="@/assets/imgs/fullsize/2021/15.jpg" @load="renderHomePage">
+      <img src="@/assets/imgs/fullsize/wildlife/1.jpg" @load="renderHomePage">
+      <img src="@/assets/imgs/fullsize/wildlife/14.jpg" @load="renderHomePage">
+      <img src="@/assets/imgs/fullsize/wildlife/24.jpg" @load="renderHomePage">
     </div>
     <div v-if="!show" class="home-loading-status">
       <div class="spinner-grow" role="status">

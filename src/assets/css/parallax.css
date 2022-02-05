@@ -1,7 +1,7 @@
 /* Create a Parallax Effect */
 
 .bgimg-1{
-    background-image: url('~@/assets/imgs/fullsize/2018/4.jpg');
+    background-image: url('~@/assets/imgs/fullsize/wildlife/1.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,21 +10,21 @@
 
 @media only screen and (max-width: 999px){
   .bgimg-1{
-    background-image: url('~@/assets/imgs/fullsize/2018/4.jpg');
+    background-image: url('~@/assets/imgs/fullsize/wildlife/1.jpg');
     min-height: 1000px;
   }
 }
 
 @media only screen and (min-width: 1000px){
   .bgimg-1{
-    background-image: url('~@/assets/imgs/fullsize/2019/12.jpg');
+    background-image: url('~@/assets/imgs/fullsize/wildlife/14.jpg');
     min-height: 1000px;
   }
 }
 
 @media only screen and (min-width: 1751px){
   .bgimg-1{
-    background-image: url('~@/assets/imgs/fullsize/2021/15.jpg');
+    background-image: url('~@/assets/imgs/fullsize/wildlife/24.jpg');
     min-height: 1000px;
   }
 }

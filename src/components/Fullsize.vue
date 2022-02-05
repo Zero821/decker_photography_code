@@ -9,7 +9,7 @@
 
 <script>
 export default {
-	props: ['file', 'year'],
+	props: ['file', 'location'],
   data () {
     return {
       loaded: false,
@@ -17,7 +17,7 @@ export default {
   },
 	methods: {
 		imageLocation () {
-      return require (`@/assets/imgs/fullsize/${this.year}/${this.file}.jpg`);
+      return require (`@/assets/imgs/fullsize/${this.location}/${this.file}.jpg`);
 		},
     fullImgLoaded () {
       this.loaded = true;

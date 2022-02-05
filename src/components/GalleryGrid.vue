@@ -7,24 +7,27 @@
 <script>
 let loadedCount = 0;
 export default {
-  props: ['photo', 'year'],
+  props: ['photo', 'location'],
   data() {
     return {
       show: false,
-      curYear: new Date().getFullYear,
+    }
+  },
+  watch: {
+    location: function (){
+      this.loadTen();
     }
   },
   methods: {
     thumbnail(file) {
-      return require (`@/assets/imgs/thumbnails/${this.year}/${file}`);
+      console.log(this.location);
+      return require(`@/assets/imgs/thumbnails/${this.location}/${file}`);
     },
     callOnClick() {
       this.$emit('showFull', event.target.getAttribute('data-photo-id'));
     },
     loadTen() {
-      if (loadedCount >= 10 && this.year != this.curYear) {
-        this.$emit('showGrid');
-      } else { //might not have 10 ready at first go
+      if (loadedCount >= 5) {
         this.$emit('showGrid');
       }
       loadedCount++;
