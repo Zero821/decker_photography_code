@@ -29,7 +29,7 @@
     height: 20px;
   }
   .bm-item-list>*>span {
-    font-weight: 100;
+    font-weight: normal;
   }
   .bm-item-list>* {
     padding: .3rem;
